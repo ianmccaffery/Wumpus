@@ -6,7 +6,7 @@ This is a project requested by Professor of Cognitive Science Bram van Heuveln f
 3) Interfaces with user-created programs designed to automatically solve the game, and gives feedback (Pass/Fail, and a runthrough of how the program failed if it did.)
 
 
-This project began as a group project in the summer of 2020, but all algorithms, code, etc on this repository were solely written and designed by Ian McCaffery of RPI. Anyone reading this readme is free to use this project as they see fit, so long as they credit the author in some way. 
+This project began as a group project in the summer of 2020, but all algorithms, code, etc on this repository were solely written and designed by Ian McCaffery of RPI. Anyone reading this readme is free to use this project as they see fit, so long as they credit the author in some way. Note that the text file, oswald-regular, was not created by Ian.
 
 Thank you for viewing my project.
 Ian McCaffery
