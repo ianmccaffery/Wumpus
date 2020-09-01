@@ -13,4 +13,4 @@ Ian McCaffery
 RPI CS '23
 
 
-Please note that currently, this project is designed to be used on Linux, and is untested with other operating systems.
+Please note that currently, this project is designed to be used on Linux, and is untested with other operating systems. Additionally, the project is still work-in-progress, and lacks full functionality.
