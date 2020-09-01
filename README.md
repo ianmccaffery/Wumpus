@@ -9,8 +9,5 @@ This is a project requested by Professor of Cognitive Science Bram van Heuveln f
 This project began as a group project in the summer of 2020, but all algorithms, code, etc on this repository were solely written and designed by Ian McCaffery of RPI. Anyone reading this readme is free to use this project as they see fit, so long as they credit the author in some way. Note that the text file, oswald-regular, was not created by Ian.
 
 Thank you for viewing my project.
-Ian McCaffery
-RPI CS '23
-
 
 Please note that currently, this project is designed to be used on Linux, and is untested with other operating systems. Additionally, the project is still work-in-progress, and lacks full functionality.
