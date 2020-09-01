@@ -2,7 +2,7 @@
 Hunt the wumpus!
 This is a project requested by Professor of Cognitive Science Bram van Heuveln from Rensselaer Polytechnic Institute. The goal is to create a desktop application that:
 1) Creates solvable "Hunt the Wumpus" game boards. (For those of you unfamiliar with the classic DOS game, https://en.wikipedia.org/wiki/Hunt_the_Wumpus)
-2) Allows users to play Hunt the Wumpus on those boards manually, using their keyboards.
+2) Allows users to play a GUI-based Hunt the Wumpus on those boards manually, using their keyboards.
 3) Interfaces with user-created programs designed to automatically solve the game, and gives feedback (Pass/Fail, and a runthrough of how the program failed if it did.)
 
 
