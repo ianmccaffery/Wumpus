@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body onload="startGame()">
+<script src = "hello.js"></script>
+<script>
+var robot;
+arrHeight = 600;
+arrWidth = 600;
+edgLen = 4;
+var grid = [];
+
+function startGame() {
+	robot = new component(arrWidth/edgLen, arrHeight/edgLen, "blue", 0, 0);
+    background = new component(arrWidth, arrHeight, "black", 0, 0);
+	gameArea.start();
+}
+
+var gameArea = {
+	canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = arrWidth;
+        this.canvas.height = arrHeight;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+function component(width, height, color, x, y)
+{
+    this.alive = true;
+    this.gold = false;
+    this.gridX = 0;
+    this.gridY = 0;
+    this.gridLoc = this.gridY*4 + this.gridX;
+	this.width = width;
+    this.height = height;
+    this.x = x;
+    this.y = y;
+    this.update = function () {
+        if (!this.alive)
+        {
+            this.color = "red";
+        }
+    	ctx = gameArea.context;
+    	ctx.fillStyle = color;
+    	ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+    this.newPos = function(xNew, yNew) {
+    	this.x = Math.max(Math.min(xNew, arrWidth-this.width), 0);
+    	this.y = Math.max(Math.min(yNew, arrHeight-this.height), 0);
+        this.gridX = this.x / this.width;
+        this.gridY = this.y / this.height;
+        this.gridLoc = this.gridY*4 + this.gridX; //gridLoc is the point in a 1d array of the grid that the robot occupies.
+    }
+}
+
+function updateGameArea() {
+	gameArea.clear();
+	gameArea.frameNo += 1;
+    background.update();
+	robot.update();
+}
+
+
+
+</script>
+<br>
+<button onmousedown="robot.newPos(robot.x, robot.y-robot.height)">Up</button>
+<br>
+<button onmousedown = "robot.newPos(robot.x-robot.width, robot.y)" >Left</button>
+<button onmousedown = "robot.newPos(robot.x+robot.width, robot.y)" >Right</button>
+<br>
+<button onmousedown = "robot.newPos(robot.x, robot.y+robot.height)" > Down</button>
+<p>Use the buttons to move</p>
+<p>Solve the puzzle!?</p>
+</body>
+</html>
