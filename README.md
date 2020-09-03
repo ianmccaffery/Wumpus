@@ -10,4 +10,4 @@ This project began as a group project in the summer of 2020, but all algorithms,
 
 Thank you for viewing my project.
 
-Please note that currently, this project is designed to be used on Linux, and is untested with other operating systems. Additionally, the project is still work-in-progress, and lacks full functionality.
+Please note that currently, the project is still work-in-progress, and lacks full functionality.
