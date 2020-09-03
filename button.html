@@ -1,0 +1,21 @@
+<script src="function.js"></script>
+<script>
+var fillArray = Module.cwrap("fillArray", null, ["number", "number", "number", "number"]);
+
+function pressBtn(){
+	var len = 16
+	var bytes_per_element = 4;   // 4 bytes each element
+    console.log("working...");
+	// alloc memory, in this case 16*4 bytes
+	var output_ptr = Module._malloc(len * bytes_per_element);
+	fillArray(4, 2, 1, output_ptr);   	                       // call the WASM function
+	var output_array = new Int32Array(Module.HEAP32.buffer, output_ptr, len); // extract data to another JS array
+	console.log("The result read is:	", output_array);
+    
+	// dealloc memory
+	Module._free(output_ptr);
+}
+</script>
+
+<button onclick="pressBtn()">Click me!</button>
+<p>Open the console to see the result!</p>
