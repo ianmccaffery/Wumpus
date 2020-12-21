@@ -6,8 +6,4 @@ This is a project requested by Professor of Cognitive Science Bram van Heuveln f
 3) Interfaces with user-created programs designed to automatically solve the game, and gives feedback (Pass/Fail, and a runthrough of how the program failed if it did.)
 4) *still under consideration* Be accessible over the web, and run within a webpage without any need for a download.
 
-This project began as a group project in the summer of 2020, but all algorithms, code, etc on this repository were solely written and designed by Ian McCaffery of RPI. Anyone reading this readme is free to use this project as they see fit, so long as they credit the author in some way. Note that the text file, oswald-regular, was not created by Ian.
-
-Thank you for viewing my project.
-
-Please note that currently, the project is still work-in-progress, and lacks full functionality.
+Please note that the final version of this project is not included on this git. The final version is now RPI property. For more information, please contact the author.
